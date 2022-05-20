@@ -33,7 +33,7 @@ int main(void)
   TOCHPINS.GPIO_Pin = GPIO_Pin_0;
   TOCHPINS.GPIO_Mode = GPIO_Mode_IN;
   TOCHPINS.GPIO_Speed = GPIO_Speed_Level_1;
-  TOCHPINS.GPIO_OType = GPIO_OType_PP;
+  TOCHPINS.GPIO_OType = GPIO_OType_OD;
   TOCHPINS.GPIO_PuPd = GPIO_PuPd_NOPULL;
   GPIO_Init(GPIOA, &TOCHPINS);
   
