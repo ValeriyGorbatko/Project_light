@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\..\..\..\4) IARprojects\PPTP_1_MERCURY\PPTP_1_MERCURY.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Project_light.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\..\..\4) IARprojects\SKAD\skad.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>

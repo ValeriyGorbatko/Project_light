@@ -1,0 +1,285 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  19/May/2022  14:34:10
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  D:\JavA\Git\Project_light\Debug\Exe\Project_light.out
+#    Map file     =  D:\JavA\Git\Project_light\Debug\List\Project_light.map
+#    Command line =  
+#        -f C:\Users\User\AppData\Local\Temp\EW3019.tmp
+#        (D:\JavA\Git\Project_light\Debug\Obj\core_cm0.o
+#        D:\JavA\Git\Project_light\Debug\Obj\delay.o
+#        D:\JavA\Git\Project_light\Debug\Obj\main.o
+#        D:\JavA\Git\Project_light\Debug\Obj\startup_stm32f0xx.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_adc.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_can.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_cec.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_comp.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_crc.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_crs.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_dac.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_dbgmcu.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_dma.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_exti.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_flash.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_gpio.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_i2c.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_iwdg.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_misc.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_pwr.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_rcc.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_rtc.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_spi.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_syscfg.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_tim.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_usart.o
+#        D:\JavA\Git\Project_light\Debug\Obj\stm32f0xx_wwdg.o
+#        D:\JavA\Git\Project_light\Debug\Obj\system_stm32f0xx.o
+#        --no_out_extension -o
+#        D:\JavA\Git\Project_light\Debug\Exe\Project_light.out --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        D:\JavA\Git\Project_light\Debug\List\Project_light.map --log
+#        libraries,initialization,modules,redirects,sections,veneers,unused_fragments,call_graph
+#        --log_file D:\JavA\Git\Project_light\Debug\List\Project_light.log
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.1\arm\config\linker\ST\stm32f051x8.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor        = *
+__CPP_Exceptions = Disabled
+__CPP_Language   = C++14
+__SystemLibrary  = DLib
+__dlib_version   = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'1fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                       0xc0
+  .intvec            ro code   0x800'0000   0xc0  startup_stm32f0xx.o [1]
+                             - 0x800'00c0   0xc0
+
+"P1":                                      0x59c
+  .text              ro code   0x800'00c0  0x164  stm32f0xx_rcc.o [1]
+  .text              ro code   0x800'0224   0xae  I32DivModFast.o [3]
+  .text              ro code   0x800'02d2    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'02d4    0x2  IntDivZer.o [3]
+  .text              ro code   0x800'02d6    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'02d8   0xf4  system_stm32f0xx.o [1]
+  .text              ro code   0x800'03cc   0xac  main.o [1]
+  .text              ro code   0x800'0478   0x8a  stm32f0xx_gpio.o [1]
+  .text              ro code   0x800'0502    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0504   0x30  delay.o [1]
+  .text              ro code   0x800'0534   0x3c  packbits_init_single.o [3]
+  .text              ro code   0x800'0570   0x28  data_init.o [3]
+  .iar.init_table    const     0x800'0598   0x10  - Linker created -
+  .text              ro code   0x800'05a8   0x1e  cmain.o [3]
+  .text              ro code   0x800'05c6    0x4  low_level_init.o [2]
+  .text              ro code   0x800'05ca    0x8  exit.o [2]
+  .text              ro code   0x800'05d2    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'05d4    0xa  cexit.o [3]
+  .text              ro code   0x800'05de    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'05e0   0x14  exit.o [4]
+  .text              ro code   0x800'05f4   0x10  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0604    0xc  cstartup_M.o [3]
+  .text              ro code   0x800'0610    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0612    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0614    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0616    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0618    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'061a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'061c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'061e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0620    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0622    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0624    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0626    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0628    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'062a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'062c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'062e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0630    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0632    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0634    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0636    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0638    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'063a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'063c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'063e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0640    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0642    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0644    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0646    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0648    0x2  startup_stm32f0xx.o [1]
+  .rodata            const     0x800'064a    0x1  unwind_debug.o [4]
+  .rodata            const     0x800'064b    0x0  packbits_init_single.o [3]
+  Initializer bytes  const     0x800'064b   0x11  <for P2-1>
+                             - 0x800'065c  0x59c
+
+"P2", part 1 of 2:                          0x34
+  P2-1                        0x2000'0000   0x34  <Init block>
+    .data            inited   0x2000'0000   0x10  stm32f0xx_rcc.o [1]
+    .bss             inited   0x2000'0010   0x24  main.o [1]
+                            - 0x2000'0034   0x34
+
+"P2", part 2 of 2:                         0x800
+  CSTACK                      0x2000'0038  0x800  <Block>
+    CSTACK           uninit   0x2000'0038  0x800  <Block tail>
+                            - 0x2000'0838  0x800
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'065c   0x800'ffff  0xf9a4
+  0x2000'0034  0x2000'0037     0x4
+  0x2000'0838  0x2000'1fff  0x17c8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x11 (32% of destination):
+           0x800'064b  0x11
+    1 destination range, total size 0x34:
+          0x2000'0000  0x34
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+D:\JavA\Git\Project_light\Debug\Obj: [1]
+    delay.o                      48
+    main.o                      172       12       36
+    startup_stm32f0xx.o         276
+    stm32f0xx_gpio.o            138
+    stm32f0xx_rcc.o             356        5       16
+    system_stm32f0xx.o          244
+    -------------------------------------------------
+    Total:                    1 234       17       52
+
+dl6M_tln.a: [2]
+    exit.o                        8
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                       12
+
+rt6M_tl.a: [3]
+    I32DivModFast.o             174
+    IntDivZer.o                   2
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    packbits_init_single.o       60
+    -------------------------------------------------
+    Total:                      328
+
+shb_l.a: [4]
+    exit.o                       20
+    unwind_debug.o                         1
+    -------------------------------------------------
+    Total:                       20        1
+
+    Linker created                        16    2 048
+-----------------------------------------------------
+    Grand Total:              1 594       34    2 100
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'0598          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'05a8          --   Gb  - Linker created -
+?main                    0x800'05a9         Code  Gb  cmain.o [3]
+APBAHBPrescTable        0x2000'0000   0x10  Data  Lc  stm32f0xx_rcc.o [1]
+CSTACK$$Base            0x2000'0038          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0838          --   Gb  - Linker created -
+Delay(unsigned int)      0x800'0505   0x12  Code  Gb  delay.o [1]
+GPIO_Init                0x800'0479   0x74  Code  Gb  stm32f0xx_gpio.o [1]
+GPIO_ReadInputDataBit    0x800'04ed    0xe  Code  Gb  stm32f0xx_gpio.o [1]
+GPIO_ResetBits           0x800'04ff    0x4  Code  Gb  stm32f0xx_gpio.o [1]
+GPIO_SetBits             0x800'04fb    0x4  Code  Gb  stm32f0xx_gpio.o [1]
+RCC_AHBPeriphClockCmd    0x800'01dd   0x14  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_APB2PeriphClockCmd   0x800'01f1   0x14  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_Clocks              0x2000'0010   0x24  Data  Lc  main.o [1]
+RCC_GetClocksFreq        0x800'00c1  0x116  Code  Gb  stm32f0xx_rcc.o [1]
+Region$$Table$$Base      0x800'0598          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'05a8          --   Gb  - Linker created -
+SystemInit               0x800'02d9   0xd4  Code  Gb  system_stm32f0xx.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'1fff         Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000         Data  Gb  <internal module>
+__aeabi_idiv0            0x800'02d5         Code  Gb  IntDivZer.o [3]
+__aeabi_uidiv            0x800'0225         Code  Gb  I32DivModFast.o [3]
+__aeabi_uidivmod         0x800'0225         Code  Gb  I32DivModFast.o [3]
+__cmain                  0x800'05a9         Code  Gb  cmain.o [3]
+__exit                   0x800'05e1   0x14  Code  Gb  exit.o [4]
+__iar_data_init3         0x800'0571   0x28  Code  Gb  data_init.o [3]
+__iar_debug_exceptions   0x800'064a    0x1  Data  Gb  unwind_debug.o [4]
+__iar_packbits_init_single3
+                         0x800'0535   0x3c  Code  Gb  packbits_init_single.o [3]
+__iar_program_start      0x800'0605         Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'05c7    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f0xx.o [1]
+_call_main               0x800'05b5         Code  Gb  cmain.o [3]
+_exit                    0x800'05d5         Code  Gb  cexit.o [3]
+_main                    0x800'05c3         Code  Gb  cmain.o [3]
+exit                     0x800'05cb    0x8  Code  Gb  exit.o [2]
+main                     0x800'03cd   0xac  Code  Gb  main.o [1]
+
+
+[1] = D:\JavA\Git\Project_light\Debug\Obj
+[2] = dl6M_tln.a
+[3] = rt6M_tl.a
+[4] = shb_l.a
+
+  1 594 bytes of readonly  code memory
+     34 bytes of readonly  data memory
+  2 100 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
